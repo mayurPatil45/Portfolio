@@ -1,0 +1,143 @@
+.education-wrapper {
+    min-height: 100vh;
+    font-family: 'Roboto';
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.title-container {
+    padding-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.cards-container {
+    margin: 2rem auto;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    background: var(--white);
+}
+
+.Card {
+    margin: 1rem;
+    height: 21rem;
+    width: 21rem;
+    padding: 0.5rem;
+    display: grid;
+    align-items: flex-start;
+    border-radius: 0.3rem;
+    text-align: center;
+    background: #ffffff;
+    transform: scale(0.5);
+    opacity: 0;
+    border-left: 8px solid #0098ff;
+    box-shadow: 0 0 3px var(--white-bg);
+}
+
+.Card:hover{
+    box-shadow: 8px 12px 10px 0px #000000;
+}
+
+#dark .Card:hover{
+    box-shadow: var(--helio-gray) 0px 20px 30px;
+}
+
+.Card.show {
+    height: auto;
+    width: 50%;
+    align-items: flex-start;
+    transition: all 800ms;
+    opacity: 1;
+    transform: scale(1);
+}
+
+#dark .Card {
+    background: var(--white-bg);
+}
+
+
+/* all h3  */
+
+.Card-inner h3 {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.Card-inner p {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.5rem auto;
+    text-align: center;
+    padding: 0px 0.5rem;
+}
+
+.education-images img {
+    height: 11rem;
+    width: 11rem;
+}
+
+/* --- medium screens----- */
+@media screen and (max-width:800px) {
+    .title-container h2 {
+        font-size: 2.4rem;
+    }
+
+    .Card {
+        height: 20.5rem;
+        width: 20rem
+    }
+
+    .Card-inner h3 {
+        margin: 7px 1rem;
+        padding: 8px;
+    }
+
+    .Card-inner p {
+        font-size: 1.156rem;
+    }
+
+    .education-images img {
+        height: 9rem;
+        width: 9rem;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .title-container h2 {
+        font-size: 2.1rem;
+    }
+
+    .Card {
+        height: 18rem;
+        width: 19rem;
+    }
+
+    .Card-inner h3 {
+        font-size: 1.2rem;
+        margin: 5px auto;
+        padding: 0.5rem;
+    }
+
+    .Card-inner p {
+        font-size: 1.025rem;
+    }
+
+    .education-images img {
+        height: 7rem;
+        width: 7rem;
+    }
+
+}

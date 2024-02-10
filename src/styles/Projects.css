@@ -1,0 +1,18 @@
+.project-wrapper{
+    min-height: 100vh;
+    width:100vw;
+    position: relative;
+    background: #e5ecfb;
+}
+
+.project-container{
+    max-width:65rem;
+    min-height: fit-content;
+    margin:2rem auto;
+    padding:1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.5rem;
+    flex-wrap: wrap;
+}

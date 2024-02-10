@@ -1,0 +1,147 @@
+:root {
+    --light-black: #e5ecfb;
+    --violet: #6f42c1;
+    --dark-theme-vio: #3f1d69;
+    --shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: var(--light-black);
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    padding: 2rem;
+}
+
+.contact-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 2rem;
+    color: var(--violet);
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+#dark .contact-info {
+    background: #ffffff;
+    color: var(--dark-theme-vio);
+    box-shadow: none;
+}
+
+.contact-info p {
+    font-size: 1.4rem;
+    margin: 1.5rem auto;
+    padding: 0.5rem;
+    font-weight: bolder;
+    color: #000000;
+}
+
+#dark .contact-info p {
+    color: #000000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 80%;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    text-indent: 0.5rem;
+    border: 1px solid var(--violet);
+    border-radius: 0.4rem;
+    margin: 5px auto;
+    outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+    box-shadow: 0 0 4px var(--violet);
+}
+
+#dark form input,
+#dark form textarea {
+    box-shadow: 0 0 4px var(--dark-theme-vio);
+    border: 1px solid var(--dark-theme-vio);
+    background: #ffffff;
+}
+
+form textarea {
+    height: 10rem;
+    resize: none;
+}
+
+.submit-btn {
+    font-size: 1.2rem;
+    padding: 0.7rem 2rem;
+    width: max-content;
+    margin: 1rem auto;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 0.6rem;
+    background: var(--cyan);
+    border: var(--shadow);
+    transition: background 0.3s, transform 0.3s, opacity 0.3s;
+}
+
+#dark .submit-btn {
+    color: #000000;
+    background: #7DF9FF;
+    transition: background 0.3s, transform 0.3s, opacity 0.3s;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.06);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+
+@media screen and (max-width: 600px) {
+    .contact-content {
+        width: 100%;
+    }
+
+    .contact-info p {
+        font-size: 1.2rem;
+    }
+
+    form input,
+    form textarea {
+        width: 90%;
+    }
+
+    .submit-btn {
+        font-size: 1.2rem;
+        padding: 0.7rem;
+    }
+}

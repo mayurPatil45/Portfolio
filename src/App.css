@@ -1,38 +1,161 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+/* reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navbar-bg:#efecf388;
+    --bigtitles: #131212;
+    --violet: #0f172a;
+    --light-violet:#131c31;
+    --light-green: #9CE37D;
+    --green:#1ec51e;
+    --asparagus: #87B37A;
+    --xanadu: #77867F;
+    --dark-theme-vio:#7DF9FF;
+    --helio-gray: #B4AAC5;
+    --white-bg:#f0ebeb;
+    --golden: #ffae00;
+    --orange: #f97b66;
+    --dark-theme-orange: #b92d14;
+    --pink:#fd4592;
+    --body-bg: #dddddd;
+    --dark-theme: #1f1d1f;
+    --red:#ca1a1a;
+    --cyan: #008B8B;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+a,
+button {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    width:100rem;
+    background: var(--body-bg);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* default styling for the headings */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+/* For the App div  */
 .App {
-  text-align: center;
+    text-align: center;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background: black;
+    position: absolute;
+    z-index: -200;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#light {
+    background: var(--body-bg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#dark {
+    background: var(--dark-theme);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.underline {
+    height: 5px;
+    width: 10rem;
+    border-radius: 1rem;
+    margin: 0.2rem auto;
+    background: #339ab9af;
 }
 
-.App-link {
-  color: #61dafb;
+/* highlighting headings */
+.heading-highlight{
+    color:var(--violet);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.track {
+    color: var(--golden);
+}
+
+/* highlighting headings dark theme */
+#dark .heading-highlight{
+    color:var(--dark-theme-vio);
+}
+
+/* heading styles */
+.component-headings{
+    font-size: 2.8rem;
+    padding: 1rem;
+    transform:translateX(30%) scale(0.6);
+    opacity:0;
+}
+.component-headings.show{
+    transition:all 800ms;
+    transform: translateX(0) scale(1);
+    opacity:1;
+}
+/* heading styles for light theme */
+.component-headings{
+    color:var(--bigtitles);
+}
+/* heading styles for dark theme */
+#dark .component-headings{
+    color:var(--helio-gray);
+
+}
+/* background for components in dark mode*/
+#dark .form-container, 
+#dark .project-wrapper,
+#dark .skills-wrapper,
+#dark .about-wrapper,
+#dark .stack,
+#dark .achievements-wrapper,
+#dark .testimonials-wrapper{
+    background: var(--dark-theme);
+}
+@media screen and (max-width:800px){
+    .underline{
+        height:4px;
+    }
+    .component-headings{
+        font-size: 2.4rem;
+    }
+}
+@media screen and (max-width:500px){
+    .underline{
+        height:3px;
+    }
+
+    .component-headings{
+        font-size: 2rem;
+        /* text-shadow: 1px 1px 2px grey; */
+    }
+
+    #dark .component-headings{
+        /* text-shadow: 1px 1px 2px white; */
+    }
+}   
+
+.about-wrapper .show{
+    transform:translateX(0);
 }

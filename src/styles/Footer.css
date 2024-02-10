@@ -1,0 +1,56 @@
+.footer-container{
+    height:fit-content;
+    width:100vw;
+    margin:0 auto;
+    padding:1rem;
+    overflow: hidden;
+    text-align: center;
+    background: white;
+}
+
+.footer-container p{
+    font-size: 1.3rem;
+    padding:0.5rem;
+    margin:0.5rem auto;
+    color:#000;
+}
+/* icons for footer */
+.footer-container .fa-heart{
+    color:#ca2222;
+}
+.footer-container i{
+    font-size: 1.4rem;
+}
+.footer-container .fa-react{
+    margin:0 !important;
+    color:#1ec7c7 !important;
+}
+
+
+.smooth-loading-bar {
+    transition: width 0.3s ease-in-out;
+}
+
+.smooth-loading-bar .loading-bar {
+    background-color: #f11946;
+    height: 5px;
+}
+
+
+@media screen and (max-width:700px){
+    .footer-container p{
+        font-size: 1.2rem;
+    }
+    .footer-container i{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:500px){
+    .footer-container p{
+        font-size: 1rem;
+    }
+    .footer-container i{
+        font-size: 1rem;
+    }
+}
