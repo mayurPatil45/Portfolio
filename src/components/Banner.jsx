@@ -20,7 +20,7 @@ const Banner = () => {
                     </p>
                     <div className="banner-buttons-container">
                         <button><a href="#contact">Let's talk ✉</a></button>
-                        <button id="resume-btn"> <a href="https://drive.google.com/file/d/1R37RRiF09FU0FpUJCxsGJVR_esqA90q4/view?usp=sharing" target="_blank" rel="noreferrer">Resume ↗</a></button>
+                        <button id="resume-btn"> <a href="https://drive.google.com/file/d/1ByufOLF0OfP5wSiyNy_pMXyLAzmg86Kl/view?usp=sharing" target="_blank" rel="noreferrer">Resume ↗</a></button>
                     </div>
                 </section>
 
